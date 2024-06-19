@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>VTPIP09_2022</title>
+	<link rel="stylesheet" href="../static/w3.css" type="text/css">
+</head>
+<body style="background-image: url('../static/bg.jpg')">
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+  <h3 class="w3-bar-item">Menu</h3>
+  <a href="/ahome" class="w3-bar-item w3-button">Home</a>
+  <a href="/sreport" class="w3-bar-item w3-button">Send Report</a>
+  <a href="/" class="w3-bar-item w3-button">Logout</a>
+</div>
+<div style="margin-left:25%; ">
+<div class="w3-container w3-center w3-red  w3-xxlarge w3-serif">
+<h1 style="text-align:'center'">Preserving Healthcare Privacy: A Smart Cloud Solution</h1>
+</div>
+<br><br><br><br><br><br><br><br><br>
+<div class="w3-container w3-margin-top w3-blue">
+<h2>Send Reports</h2>
+<form action="/send" method= "POST" enctype = "multipart/form-data">
+<table class="w3-table w3-striped w3-bordered w3-hoverable w3-center">
+<thead>
+<tr class="w3-teal">
+<th>Name</th><th>Email</th><th>Doctor Id</th><th>File</th><th>Send</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><input type="hidden" name="id" value='{{ result [0] }}'><input type="text" name="name" value='{{ result [1] }}'></td>
+<td><input type="text" name="uid" value='{{ result [2] }}'></td>
+<td><input type="text" name="did" value='{{ result [4] }}'></td>
+<td><input type="file" name="file"></td>
+<td><button class="w3-btn w3-teal">Upload</button></td>
+</tr></tbody>
+</table>
+</form>
+</div>
+</div>
+</body>
+</html>
